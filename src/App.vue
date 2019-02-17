@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <anketa msg="test work"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import anketa from './components/anketa.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    anketa
   }
 }
 </script>
 
 <style>
+@font-face {
+  font-family: "couriernew";
+  font-style: normal;
+  src: local("O"), url("./assets/fonts/couriernew/cour.ttf") format("truetype");
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'PT Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: rgb(0, 0, 0);
   margin-top: 60px;
+  margin-bottom: 60px;
 }
 </style>
