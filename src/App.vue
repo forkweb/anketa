@@ -22,6 +22,9 @@ export default {
   font-style: normal;
   src: local("O"), url("./assets/fonts/couriernew/cour.ttf") format("truetype");
 }
+body {
+  background-color: #797979;
+}
 #app {
   font-family: 'PT Sans', sans-serif;
   -webkit-font-smoothing: antialiased;

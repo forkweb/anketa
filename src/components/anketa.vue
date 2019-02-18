@@ -100,23 +100,35 @@
 
           <div class="range-slider">
 	          <template>
-              <div>
-    <VueSlideBar
-      v-model="slider.value"
-      :data="slider.data"
-      :range="slider.range"
-      :labelStyles="{ color: '#4a4a4a', backgroundColor: '#4a4a4a', transform: 'translate(0%, 0)' }"
-      :processStyle="{ backgroundColor: '#d8d8d8' }"
-      @callbackRange="callbackRange">
-      <template slot="tooltip" slot-scope="tooltip">
-        <img src="../assets/img/slider_triangle.png">
-      </template>
-    </VueSlideBar>
-  </div>
+            <div class="slide_custom">
+              <VueSlideBar
+                v-model="slider.value"
+                :data="slider.data"
+                :range="slider.range"
+                :lineHeight="0"
+                :labelStyles="{ color: '#4a4a4a', backgroundColor: '#4a4a4a' }"
+                :processStyle="{ backgroundColor: 'red' }"
+                @callbackRange="callbackRange">
+                <template slot="tooltip" slot-scope="tooltip">
+                  <img src="../assets/img/slider_triangle.png">
+                  <!-- <div class="line_test">adasd</div> -->
+                </template>
+              </VueSlideBar>
+            </div>
             </template>
           </div>
 
         </div>
+
+
+        <div class="about_me">
+          <h3>Расскажите о себе словами</h3>
+          <p>Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.</p>
+
+          <textarea>Вакансия заинтересовала </textarea>
+
+        </div>
+
 
       </div>
 
@@ -169,16 +181,16 @@ export default {
     VueSlideBar
   },
   mounted(){
-  $('.single-slider').jRange({
-    from: -2.0,
-    to: 2.0,
-    step: 0.5,
-    scale: [-2.0,-1.0,0.0,1.0,2.0],
-    format: '%s',
-    width: 300,
-    showLabels: true,
-    snap: true
-});
+    var textarea = document.querySelector('textarea');
+    var initialHeight = 60;
+
+    var resize = function resize() {
+      textarea.style.height = initialHeight + 'px';
+      var height = textarea.scrollHeight;
+      textarea.style.height = height + initialHeight + 'px';
+    };
+  resize();
+  textarea.addEventListener('input', resize);
   }
 }
 
@@ -392,21 +404,72 @@ input:checked+label img {
     color: rgb(61, 61, 61);
     font-size: 15px;
     margin-top: 10px;
-    line-height: 1.5;
+    line-height: 1.3;
 }
 
-/* item_personal_skill */
-
-
-#slider {
-    background-color: rgb(0, 128, 0) !important;
+.slide_custom {
+    position: relative;
+    margin-top: 13px;
+    cursor: pointer;
 }
-/* .range-slider span {
-    position: absolute;
-    transform: translate(0%, 0) !important;
+
+.slide_custom::before {
+    content: "";
+  position: absolute;
+  background-image: url("../assets/img/slider_line.png");
+  width: 100%;
+  height: 3px;
+  background-repeat: round;
+    left: 0;
+    bottom: 57px;
+    z-index: 3;
+}
+
+/* .slide_custom span {
+    width: 200px !important;
     white-space: normal !important;
-    width: 170px !important;
     text-align: left !important;
-    margin: 0 auto;
+    transform: translate(-50%, 0) !important;
 } */
+
+/* textarea {
+  width: 100%;
+  height: 42px;
+  display: block;
+  font-size: 22px;
+  color: #f9f7e8;
+  overflow: hidden;
+  line-height: 44px;
+  background-image: url("../assets/img/about_me_line2.png"), linear-gradient(to bottom, transparent, transparent 42px, #f9f7e8 0);
+  background-size: 100% 44px;
+  background-repeat: repeat-y;
+  background-color: transparent;
+  border: none;
+  resize: none;
+} */
+
+  .about_me textarea {
+    width: 100%;
+    display: block;
+    font-size: 30px;
+    font-family: "couriernew";
+    color: #231f20;
+    overflow: hidden;
+    line-height: 2.0;
+    background-image: url("../assets/img/about_me_line4.png");
+    background-size: auto;
+    background-repeat: repeat-y;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    resize: none;
+    background-position: 0 0px;
+    padding-left: 6px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+
+
 </style>
