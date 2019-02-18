@@ -89,7 +89,7 @@
               <label for="check18"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>Я ленивый(-ая)</label>
 
               <input class="hide_checkbox" id="check19" name="check19" value="У меня хороший английский" type="checkbox">
-              <label for="check19"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>У меня хороший английский</label>      
+              <label for="check19" class="line_h_fix"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>У меня хороший английский</label>      
             </form>            
           </div>
         </div>
@@ -125,7 +125,41 @@
           <h3>Расскажите о себе словами</h3>
           <p>Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.</p>
 
-          <textarea>Вакансия заинтересовала </textarea>
+          <textarea>В вакансии привлекли условия. Занимаюсь версткой, изучаю JS и фреймворки </textarea>
+        </div>
+
+        <div class="future_plans">
+          <h3>Какие у вас планы на будущее?</h3>
+          <p>Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.</p>
+
+          <form class="form_future_plans">
+
+              <div class="item_plans">
+                <input class="hide_radio" id="check1" name="future_plans" value="Верстать" type="radio">
+                <label for="check1"> <div class="radio_custom"> <img src="../assets/img/radio_ok.png" alt=""> </div>Верстать</label>
+              </div>
+
+              <div class="item_plans">
+                <input class="hide_radio" id="check2" name="future_plans" value="Прокачиваться в JS" type="radio" checked="checked">
+                <label for="check2"> <div class="radio_custom"> <img src="../assets/img/radio_ok.png" alt=""> </div>Прокачиваться в JS</label>
+              </div>
+
+              <div class="item_plans">
+                <input class="hide_radio" id="check3" name="future_plans" value="Менеджерство" type="radio">
+                <label for="check3"> <div class="radio_custom"> <img src="../assets/img/radio_ok.png" alt=""> </div>Менеджерство</label>
+              </div>
+
+              <div class="item_plans">
+                <input class="hide_radio" id="check2" name="future_plans" value="Другое" type="radio">
+                <label for="check2"> <div class="radio_custom"> <img src="../assets/img/radio_ok.png" alt=""> </div>Другое</label>
+              </div>
+  
+          </form>
+        </div>
+
+        <div class="date_completion">
+          <!-- <label>Дата заполнения <div><input type="text" value="18.02.2019"></div> </label>  -->
+          <label for="date_comp">Дата заполнения:</label><input id="date_comp" type="date" value="2019-02-18">
 
         </div>
 
@@ -191,6 +225,8 @@ export default {
     };
   resize();
   textarea.addEventListener('input', resize);
+
+
   }
 }
 
@@ -471,5 +507,120 @@ textarea:focus {
 }
 
 
+label.line_h_fix {
+    line-height: 1.2 !important;
+}
 
+/* radio */
+/*CHECKBOX custom*/
+.hide_radio {
+    width: 100%;
+    height: 26px;
+    position: absolute;
+    z-index: 28;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.radio_custom {
+	transition-duration: 0.3s;
+  width: 19px;
+  height: 18px;
+	display: inline-block;
+	text-align: center;
+	line-height: 20px;
+	margin-right: 6px;
+	border-radius: 3px;
+  cursor: pointer;
+  margin-top: 9px;
+  padding-right: 7px;
+}
+
+.radio_custom::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 41px;
+    height: 45px;
+    background-image: url("../assets/img/radio.png");
+    margin-top: -18px;
+    margin-left: -8px;
+}
+
+/* .hide_radio {
+	display: none;
+}  */
+
+.form_future_plans input:checked+label img {
+	opacity: 1;
+}
+
+.form_future_plans label img {
+    margin-top: -5px;
+    margin-left: 1px;
+    transition-duration: 0.3s;
+}
+
+.form_future_plans label {
+  display: flex;
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  padding-right: 25px;
+}
+
+form.form_future_plans {
+    display: flex;
+}
+
+/* radio */
+
+.future_plans {
+    padding-top: 9px;
+}
+
+::-webkit-datetime-edit { padding: 0.2em; }
+::-webkit-datetime-edit-fields-wrapper { background: rgba(255, 255, 255, 0); }
+::-webkit-datetime-edit-text { color: balck; padding: .2em; }
+::-webkit-datetime-edit-month-field { color: #333; }
+::-webkit-datetime-edit-day-field { color: #333; }
+::-webkit-datetime-edit-year-field { color: #333; }
+::-webkit-inner-spin-button { display: none; }
+::-webkit-calendar-picker-indicator { background: rgba(255, 255, 255, 0); padding-left: 5px }
+
+.date_completion label {
+    font-size: 22px;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+#date_comp {
+    background-color: rgba(249, 249, 249, 0);
+    border: none;
+    font-family: "couriernew";
+    font-size: 30px;
+    outline: none;
+    position: relative;
+    margin-left: 20px;
+}
+
+#date_comp::after {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/img/border.png");
+  width: 230px;
+  height: 3px;
+  background-repeat: round;
+  left: 0;
+  bottom: 0px;
+}
+
+.date_completion {
+    margin-top: 85px;
+    display: flex;
+}
 </style>
