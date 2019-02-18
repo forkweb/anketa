@@ -24,14 +24,74 @@
         </div>
 
         <div class="item_personal_skill">
-          <form >
-            <h3>Расскажите о себе чекбоксами</h3>
-            <p>Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это   означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.</p>
-            <p><input type="checkbox" id="check1"><label for="check1">Lorem</label>
-            <input type="checkbox" id="check2"><label for="check2">Ipsum</label>
-            <input type="checkbox" id="check3"><label for="check3">Dolor</label>
-            <input type="checkbox" id="check4"><label for="check4">Sit amet</label></p>
-          </form> 
+          <h3>Расскажите о себе чекбоксами</h3>
+          <p>Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это   означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.</p>
+
+          <div class="items_form_skils">
+
+            <form class="form_skils">
+              <input class="hide_checkbox" id="check1" name="check1" value="БЭМ/OOCSS" type="checkbox">
+              <label for="check1"><div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>БЭМ/OOCSS</label>
+
+              <input class="hide_checkbox" id="check2" name="check2" value="Pug (Jade)" type="checkbox">
+              <label for="check2"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>Pug (Jade)</label>
+
+              <input class="hide_checkbox" id="check3" name="check3" value="Stylus/LESS/SASS" type="checkbox" checked="checked">
+              <label for="check3"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>Stylus/LESS/SASS</label>
+
+              <input class="hide_checkbox" id="check4" name="check4" value="Работаю с SVG" type="checkbox">
+              <label for="check4"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>Работаю с SVG</label>
+
+              <input class="hide_checkbox" id="check5" name="check5" value="Верстаю семантично" type="checkbox" checked="checked">
+              <label for="check5"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>Верстаю семантично</label>      
+              
+              <input class="hide_checkbox" id="check6" name="check6" value="Accessibility (A11Y)" type="checkbox">
+              <label for="check6"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>Accessibility (A11Y)</label>              
+
+              <input class="hide_checkbox" id="check7" name="check7" value="ES2015/ES2016" type="checkbox">
+              <label for="check7"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>ES2015/ES2016</label>
+            </form>
+
+            <form class="form_skils">
+              <input class="hide_checkbox" id="check8" name="check8" value="Gulp/GRUNT" type="checkbox" checked="checked">
+              <label for="check8"><div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>Gulp/GRUNT</label>
+
+              <input class="hide_checkbox" id="check9" name="check9" value="Webpack" type="checkbox" checked="checked">
+              <label for="check9"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>Webpack</label>
+
+              <input class="hide_checkbox" id="check10" name="check10" value="Дружу с WebGL" type="checkbox">
+              <label for="check10"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>Дружу с WebGL</label>
+
+              <input class="hide_checkbox" id="check11" name="check11" value="jQuery" type="checkbox" checked="checked">
+              <label for="check11"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>jQuery</label>
+
+              <input class="hide_checkbox" id="check12" name="check12" value="Знаю/изучаю VUE" type="checkbox" checked="checked">
+              <label for="check12"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>Знаю/изучаю VUE</label>      
+              
+              <input class="hide_checkbox" id="check13" name="check13" value="Знаю/изучаю React" type="checkbox">
+              <label for="check13"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>Знаю/изучаю React</label>              
+
+              <input class="hide_checkbox" id="check14" name="check14" value="Знаю/изучаю Node.js" type="checkbox">
+              <label for="check14"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>Знаю/изучаю Node.js</label>
+            </form>
+
+            <form class="form_skils">
+              <input class="hide_checkbox" id="check15" name="check15" value="Использую Git" type="checkbox" checked="checked">
+              <label for="check15"><div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>Использую Git</label>
+
+              <input class="hide_checkbox" id="check16" name="check16" value="С глазомером всё ок" type="checkbox" checked="checked">
+              <label for="check16"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>С глазомером всё <span class="easter_egg">ок</span></label>
+
+              <input class="hide_checkbox" id="check17" name="check17" value="Читаю habr.com" type="checkbox" checked="checked">
+              <label for="check17"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>Читаю habr.com</label>
+
+              <input class="hide_checkbox" id="check18" name="check18" value="Я ленивый(-ая)" type="checkbox">
+              <label for="check18"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>Я ленивый(-ая)</label>
+
+              <input class="hide_checkbox" id="check19" name="check19" value="У меня хороший английский" type="checkbox">
+              <label for="check19"> <div class="checkbox_custom"> <img src="../assets/img/checkbox_ok.png" alt=""> </div>У меня хороший английский</label>      
+            </form>            
+          </div>
         </div>
 
       </div>
@@ -165,6 +225,96 @@ a {
 .item_personal_skill h3 {
   font-size: 24px;
 }
+
+.items_form_skils {
+    display: flex;
+    position: relative;
+}
+
+.form_skils {
+    /* width: 222px; */
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 12px;
+    position: relative;
+}
+
+.items_form_skils label {
+    width: 100%;
+    cursor: pointer;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.70;
+    display: flex;
+    margin-left: 3px;
+}
+
+.items_form_skils input {
+  position: absolute;
+  opacity: 0;
+}
+
+
+
+/*CHECKBOX custom*/
+
+.checkbox_custom {
+	/* border: 1px solid rgb(109, 109, 109) !important; */
+	transition-duration: 0.3s;
+  width: 19px;
+  height: 18px;
+	display: inline-block;
+	text-align: center;
+	line-height: 20px;
+	margin-right: 6px;
+	border-radius: 3px;
+  cursor: pointer;
+  margin-top: 9px;
+}
+
+.checkbox_custom::before {
+  content: '';
+  position: absolute;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 19px;
+  height: 18px;
+  background-image: url("../assets/img/checkbox.png");
+  margin-left: -3px;
+}
+
+.hide_checkbox {
+	display: none;
+}
+
+label img {
+	font-size: 16px;
+	opacity: 0;
+}
+
+input:checked+label img {
+	opacity: 1;
+}
+
+.form_skils label img {
+    margin-top: -10px;
+    margin-left: 0px;
+}
+
+/*CHECKBOX custom*/
+
+.items_form_skils label .easter_egg {
+    padding-top: 1px;
+    padding-left: 5px;
+}
+
+.content_file p {
+    color: rgb(61, 61, 61);
+    font-size: 15px;
+    margin-top: 10px;
+}
+
 /* item_personal_skill */
 
 
