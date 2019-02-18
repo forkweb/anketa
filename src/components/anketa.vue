@@ -313,6 +313,7 @@ input:checked+label img {
     color: rgb(61, 61, 61);
     font-size: 15px;
     margin-top: 10px;
+    line-height: 1.5;
 }
 
 /* item_personal_skill */
