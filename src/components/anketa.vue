@@ -94,6 +94,18 @@
           </div>
         </div>
 
+        <div class="item_javascript">
+
+          <h3>Уровень владения JavaScript</h3>
+
+          <div class="range-slider">
+	          <template>
+              <!-- <VueSlideBar v-model="value"/> -->
+            </template>
+          </div>
+
+        </div>
+
       </div>
 
     </div>
@@ -105,8 +117,14 @@ export default {
   name: 'anketa',
   props: {
     msg: String
+  },
+  mounted(){
+  
   }
 }
+
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -119,6 +137,7 @@ body {
 }
 h3 {
   margin: 40px 0 0;
+  font-size: 24px;
 }
 ul {
   list-style-type: none;
@@ -221,10 +240,10 @@ a {
 .item_personal_skill {
     padding-top: 8px;
 }
-
+/* 
 .item_personal_skill h3 {
   font-size: 24px;
-}
+} */
 
 .items_form_skils {
     display: flex;

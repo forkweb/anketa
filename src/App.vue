@@ -7,6 +7,7 @@
 <script>
 import anketa from './components/anketa.vue'
 
+
 export default {
   name: 'app',
   components: {
