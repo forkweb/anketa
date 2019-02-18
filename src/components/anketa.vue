@@ -620,7 +620,7 @@ form.form_future_plans {
 }
 
 .date_completion {
-    margin-top: 85px;
+    margin-top: 75px;
     display: flex;
 }
 </style>
