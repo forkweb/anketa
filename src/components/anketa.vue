@@ -100,7 +100,19 @@
 
           <div class="range-slider">
 	          <template>
-              <!-- <VueSlideBar v-model="value"/> -->
+              <div>
+    <VueSlideBar
+      v-model="slider.value"
+      :data="slider.data"
+      :range="slider.range"
+      :labelStyles="{ color: '#4a4a4a', backgroundColor: '#4a4a4a', transform: 'translate(0%, 0)' }"
+      :processStyle="{ backgroundColor: '#d8d8d8' }"
+      @callbackRange="callbackRange">
+      <template slot="tooltip" slot-scope="tooltip">
+        <img src="../assets/img/slider_triangle.png">
+      </template>
+    </VueSlideBar>
+  </div>
             </template>
           </div>
 
@@ -113,13 +125,60 @@
 </template>
 
 <script>
+import VueSlideBar from 'vue-slide-bar'
 export default {
   name: 'anketa',
   props: {
     msg: String
   },
+  data () {
+    return {
+      rangeValue: {},
+      slider: {
+        value: 3,
+        data: [
+          1,
+          2,
+          3,
+          4
+        ],
+        range: [
+          {
+            label: 'Не владею'
+          },
+          {
+            label: 'Использую готовые решения'
+          },
+          {
+            label: 'Использую готовые решения и умею их переделывать'
+          },
+          {
+            label: 'Пишу сложный JS с нуля'
+          }
+        ]
+      },
+    }
+  },
+  methods: {
+    callbackRange (val) {
+      this.rangeValue = val
+      // this.sliderWithLabel.rangeValue = val
+    }
+  },
+  components: {
+    VueSlideBar
+  },
   mounted(){
-  
+  $('.single-slider').jRange({
+    from: -2.0,
+    to: 2.0,
+    step: 0.5,
+    scale: [-2.0,-1.0,0.0,1.0,2.0],
+    format: '%s',
+    width: 300,
+    showLabels: true,
+    snap: true
+});
   }
 }
 
@@ -319,6 +378,7 @@ input:checked+label img {
 .form_skils label img {
     margin-top: -10px;
     margin-left: 0px;
+    transition-duration: 0.3s;
 }
 
 /*CHECKBOX custom*/
@@ -338,4 +398,15 @@ input:checked+label img {
 /* item_personal_skill */
 
 
+#slider {
+    background-color: rgb(0, 128, 0) !important;
+}
+/* .range-slider span {
+    position: absolute;
+    transform: translate(0%, 0) !important;
+    white-space: normal !important;
+    width: 170px !important;
+    text-align: left !important;
+    margin: 0 auto;
+} */
 </style>
