@@ -181,7 +181,7 @@ export default {
     return {
       rangeValue: {},
       slider: {
-        value: 3,
+        value: 2,
         data: [
           1,
           2,
@@ -453,36 +453,14 @@ input:checked+label img {
     content: "";
   position: absolute;
   background-image: url("../assets/img/slider_line.png");
-  width: 100%;
+  width: 101%;
   height: 3px;
   background-repeat: round;
-    left: 0;
+    left: -2px;
     bottom: 57px;
     z-index: 3;
 }
 
-/* .slide_custom span {
-    width: 200px !important;
-    white-space: normal !important;
-    text-align: left !important;
-    transform: translate(-50%, 0) !important;
-} */
-
-/* textarea {
-  width: 100%;
-  height: 42px;
-  display: block;
-  font-size: 22px;
-  color: #f9f7e8;
-  overflow: hidden;
-  line-height: 44px;
-  background-image: url("../assets/img/about_me_line2.png"), linear-gradient(to bottom, transparent, transparent 42px, #f9f7e8 0);
-  background-size: 100% 44px;
-  background-repeat: repeat-y;
-  background-color: transparent;
-  border: none;
-  resize: none;
-} */
 
   .about_me textarea {
     width: 100%;
@@ -623,4 +601,9 @@ form.form_future_plans {
     margin-top: 75px;
     display: flex;
 }
+
+.item_plans {
+    position: relative;
+}
+
 </style>
