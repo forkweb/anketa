@@ -262,7 +262,7 @@ a {
 .personnel_file {
   background-image: url("../assets/img/bg.jpg");
   width: 1000px;
-  height: 1900px;
+  height: auto;
   margin: 0 auto;
   position: relative;
 } 
