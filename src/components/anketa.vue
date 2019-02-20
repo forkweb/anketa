@@ -232,22 +232,6 @@ export default {
   textarea.addEventListener('input', resize);
 
 
-// $('.united.modal').modal({
-
-// 	allowMultiple: false,
-// });
-
-// $('#modal1').modal('attach events', '#call-modals');
-// $('#modal2').modal('attach events', '#btn-modal-1');
-// $('#modal3').modal('attach events', '#btn-modal-2');
-
-// $('center .button').on('click', function(){
-// 	modal = $(this).attr('data-modal');
-// 	$('#'+modal+'.modal').modal(
-// 		'show'
-// 	);
-// });
-
 $('#example8').calendar({
   type: 'year'
 });
