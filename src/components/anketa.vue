@@ -5,19 +5,8 @@
       <div class="content_file">
 
         <div class="item_personal_data">
-          
-          <!-- <div class="input_data">
-            <label>Полное ФИО</label><input id="" value="Атаманов Алексей Анатольевич">
-          </div>
-          <div class="input_data">
-            <label>Год рождения</label><input id="" value="Атаманов Алексей Анатольевич">
-          </div>
-          <div class="input_data">
-            <label>Почта</label><input id="" value="Атаманов Алексей Анатольевич">
-          </div> -->
 
           <label>Полное ФИО <div><input type="text" value="Атаманов Алексей Анатольевич" placeholder="Введите ФИО"></div> </label> 
-          <!-- <label>Год рождения <div><input type="number" min="1900" max="2099" step="1" value="1992" placeholder="Укажите год рождения"></div> </label>  -->
           <label>Год рождения <div class="" >
             <!-- <input type="text" placeholder="Укажите год рождения" value="1992"> -->
               <el-date-picker
@@ -170,7 +159,7 @@
 
         <div class="date_completion">
           <!-- <label>Дата заполнения <div><input type="text" value="18.02.2019"></div> </label>  -->
-          <label for="date_comp">Дата заполнения:</label><input id="date_comp" type="date" value="2019-02-18">
+          <label for="date_comp">Дата заполнения:</label> <div class="date_foot"><input id="date_comp" type="date" value="2019-02-18"></div> 
 
         </div>
 
@@ -611,14 +600,18 @@ form.form_future_plans {
     margin-left: 20px;
 }
 
-#date_comp::after {
+.date_foot {
+    position: relative;
+}
+
+.date_foot::after {
   content: "";
   position: absolute;
   background-image: url("../assets/img/border.png");
   width: 230px;
   height: 3px;
   background-repeat: round;
-  left: 0;
+  left: 20px;
   bottom: 0px;
 }
 
@@ -629,6 +622,10 @@ form.form_future_plans {
 
 .item_plans {
     position: relative;
+}
+
+.item_personal_data label:first-child input {
+  text-transform: capitalize;
 }
 
 @media screen and (max-width:1020px) {
