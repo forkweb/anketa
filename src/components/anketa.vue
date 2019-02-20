@@ -18,7 +18,14 @@
 
           <label>Полное ФИО <div><input type="text" value="Атаманов Алексей Анатольевич" placeholder="Введите ФИО"></div> </label> 
           <!-- <label>Год рождения <div><input type="number" min="1900" max="2099" step="1" value="1992" placeholder="Укажите год рождения"></div> </label>  -->
-          <label>Год рождения <div class="ui calendar" id="example8" ><input type="text" placeholder="Укажите год рождения" value="1992"></div> </label> 
+          <label>Год рождения <div class="" >
+            <!-- <input type="text" placeholder="Укажите год рождения" value="1992"> -->
+              <el-date-picker
+                v-model="value5"
+                type="year"
+                placeholder="Укажите год рождения">
+              </el-date-picker>
+            </div> </label> 
 
 
 
@@ -177,6 +184,10 @@
 <script>
 import VueSlideBar from 'vue-slide-bar'
 
+
+
+
+
 export default {
   name: 'anketa',
   props: {
@@ -184,6 +195,7 @@ export default {
   },
   data () {
     return {
+      value5: '1992',
       rangeValue: {},
       slider: {
         value: 2,
@@ -463,15 +475,15 @@ input:checked+label img {
 }
 
 .slide_custom::before {
-    content: "";
+  content: "";
   position: absolute;
   background-image: url("../assets/img/slider_line.png");
-  width: 101%;
+  width: 101.1%;
   height: 3px;
   background-repeat: round;
-    left: -2px;
-    bottom: 57px;
-    z-index: 3;
+  left: -3px;
+  bottom: 57px;
+  z-index: 3;
 }
 
 
