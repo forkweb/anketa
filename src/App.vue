@@ -85,7 +85,7 @@ body {
 }
 
 .item_personal_data .el-input__inner::placeholder {
-  color: black;
+  color: rgb(132, 129, 121);
 }
 
 .item_personal_data .el-date-editor.el-input.el-input--prefix.el-input--suffix.el-date-editor--year::after {
