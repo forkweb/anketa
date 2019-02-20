@@ -16,11 +16,15 @@
             <label>Почта</label><input id="" value="Атаманов Алексей Анатольевич">
           </div> -->
 
-          <label>Полное ФИО <div><input type="text" value="Атаманов Алексей Анатольевич"></div> </label> 
-          <label>Год рождения <div><input type="text" value="1992"></div> </label> 
-          <label>Место жительства <div><input type="text" value="г. Димитровград, Россия"></div> </label> 
-          <label>Скайп <div><input type="text" value="nerondevil"></div> </label> 
-          <label>Почта <div><input type="text" value="leshadgrad@mail.ru (info@forkweb.ru)"></div> </label> 
+          <label>Полное ФИО <div><input type="text" value="Атаманов Алексей Анатольевич" placeholder="Введите ФИО"></div> </label> 
+          <!-- <label>Год рождения <div><input type="number" min="1900" max="2099" step="1" value="1992" placeholder="Укажите год рождения"></div> </label>  -->
+          <label>Год рождения <div class="ui calendar" id="example8" ><input type="text" placeholder="Укажите год рождения" value="1992"></div> </label> 
+
+
+
+          <label>Место жительства <div><input type="text" value="г. Димитровград, Россия" placeholder="Введите место жительства"></div> </label> 
+          <label>Скайп <div><input type="text" value="nerondevil" placeholder="Введите id skype"></div> </label> 
+          <label>Почта <div><input type="email" value="leshadgrad@mail.ru (info@forkweb.ru)" placeholder="Введите Email"></div> </label> 
         </div>
 
         <div class="item_personal_skill">
@@ -125,7 +129,7 @@
           <h3>Расскажите о себе словами</h3>
           <p>Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.</p>
 
-          <textarea>В вакансии привлекли условия. Занимаюсь версткой, изучаю JS и фреймворки </textarea>
+          <textarea placeholder="Расскажите о себе">В вакансии привлекли условия. Занимаюсь версткой, изучаю JS и фреймворки </textarea>
         </div>
 
         <div class="future_plans">
@@ -172,6 +176,7 @@
 
 <script>
 import VueSlideBar from 'vue-slide-bar'
+
 export default {
   name: 'anketa',
   props: {
@@ -225,6 +230,30 @@ export default {
     };
   resize();
   textarea.addEventListener('input', resize);
+
+
+// $('.united.modal').modal({
+
+// 	allowMultiple: false,
+// });
+
+// $('#modal1').modal('attach events', '#call-modals');
+// $('#modal2').modal('attach events', '#btn-modal-1');
+// $('#modal3').modal('attach events', '#btn-modal-2');
+
+// $('center .button').on('click', function(){
+// 	modal = $(this).attr('data-modal');
+// 	$('#'+modal+'.modal').modal(
+// 		'show'
+// 	);
+// });
+
+$('#example8').calendar({
+  type: 'year'
+});
+
+
+
 
 
   }
@@ -604,6 +633,12 @@ form.form_future_plans {
 
 .item_plans {
     position: relative;
+}
+
+@media screen and (max-width:1020px) {
+	.personnel_file {
+		width: 100%
+	}
 }
 
 </style>
